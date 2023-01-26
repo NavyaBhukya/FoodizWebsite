@@ -1,0 +1,11 @@
+.wrapper{
+    position: relative;
+    width: 400px;
+    height: 450px;
+    background: rgba(red, rgb(21, 207, 21), blue, alpha);
+    box-shadow: 1px solid green;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

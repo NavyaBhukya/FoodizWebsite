@@ -1,0 +1,29 @@
+<div class="blob"></div>
+<div class="wrapper" >
+   <form action="" #userSignUp="ngForm" (ngSubmit)="signUp(userSignUp.value)">
+       <h2>Registar</h2>
+       <div class="input-box">
+        <span class="icon"><i class="fa-solid fa-user"></i></span>
+        <input type="text" required ngModel>
+        <label>User Name</label>       
+      </div>
+
+       <div class="input-box">
+          <span class="icon"><i class="fa-solid fa-envelope"></i></span>
+          <input type="email" required ngModel>
+          <label>Email</label>       
+        </div>
+        <div class="input-box">
+            <span class="icon"><i class="fa-solid fa-key"></i></span>
+            <input type="password" required ngModel>
+            <label>Password</label>       
+          </div>
+          
+          <button type="submit">login</button>
+          <div class="registar-link">
+            <p>Already have an account? <a routerLink="/login" routerLinkActive="active">login</a></p>
+          </div>
+   </form>
+
+
+</div>

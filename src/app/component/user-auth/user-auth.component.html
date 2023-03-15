@@ -1,25 +1,30 @@
-<div class="blob"></div>
 <div class="wrapper" >
-   <form action="" #userSignUp="ngForm" (ngSubmit)="signUp(userSignUp.value)">
+   <form [formGroup]="signUpForm" #userSignUp="ngForm" (ngSubmit)="onSubmit()">
        <h2>Registar</h2>
        <div class="input-box">
         <span class="icon"><i class="fa-solid fa-user"></i></span>
-        <input type="text" required ngModel>
+        <input type="text" class="form-control" formControlName="userName" id="userName" [(ngModel)]="signupObj.userName" name="userName"  >
         <label>User Name</label>       
       </div>
+      <div style="color: red; padding: 0px; margin: 0px;" *ngIf="userName.invalid && userName.touched">**Please Enter valid Input</div>
+
 
        <div class="input-box">
           <span class="icon"><i class="fa-solid fa-envelope"></i></span>
-          <input type="email" required ngModel>
+          <input type="email" class="form-control"  formControlName="email" id="email" [(ngModel)]="signupObj.email" name="email">
           <label>Email</label>       
         </div>
+        <div style="color: red; padding: 0px; margin: 0px;" *ngIf="email.invalid && email.touched">**Please Enter valid Input</div>
+        
+        
         <div class="input-box">
             <span class="icon"><i class="fa-solid fa-key"></i></span>
-            <input type="password" required ngModel>
+            <input type="password" class="form-control" formControlName="password" id="password" [(ngModel)]="signupObj.password">
             <label>Password</label>       
           </div>
-          
-          <button type="submit">login</button>
+          <div style="color: red; padding: 0px; margin: 0px;" *ngIf="password.invalid && password.touched">**Please Enter valid Input</div>
+
+          <button type="submit" (click)="onSignUp()" >SignUp</button>
           <div class="registar-link">
             <p>Already have an account? <a routerLink="/login" routerLinkActive="active">login</a></p>
           </div>
@@ -27,3 +32,4 @@
 
 
 </div>
+<app-footer></app-footer>

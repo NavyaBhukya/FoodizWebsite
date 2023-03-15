@@ -98,7 +98,7 @@ span{
 
 
    */
-/* .input{
+ /* .input{
     width: 100%;
     height: 40px;
     background-color: rgba(0,0,0,0.5);
@@ -126,66 +126,113 @@ span{
     margin-top: 30px;
     border-radius: 20px;
 } */
-   
-ul{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    list-style-type: none;
-    padding: 0px;
-    width: 100%;
-}
-ul li a{
-    height: 17rem;
-    width: 15rem;
-    border: 1px solid orangered;
-    border-radius:  1rem;
-    margin: 0.5rem;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    color: #e72929;
-}
-li a:hover{
-    opacity: 0.9;
-    cursor: pointer;
-}
-.content{
-    padding: .5rem 1 rem;
-    position: relative;
-    margin: 10px 10px;
-}
-.favorite{
-    position: absolute;
-    top: .5rem;
-    right: 1rem;
-    font-size: 1.5rem;
 
-}
-.favorite.not{
-    color: black;
-}
-.product-item-footer{
+ ul {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-wrap: wrap;
+     list-style-type: none;
+     padding: 0px;
+     width: 100%;
+ }
+
+ ul li a {
+     height: 17rem;
+     width: 15rem;
+     border: 1px solid orangered;
+     border-radius: 1rem;
+     margin: 0.5rem;
+     display: flex;
+     flex-direction: column;
+     overflow: hidden;
+     color: #e72929;
+ }
+
+ li a:hover {
+     opacity: 0.9;
+     cursor: pointer;
+ }
+
+ .content {
+     padding: .5rem 1 rem;
+     position: relative;
+     margin: 10px 10px;
+ }
+
+ .favorite {
+     position: absolute;
+     top: .5rem;
+     right: 1rem;
+     font-size: 1.5rem;
+
+ }
+
+ .favorite.not {
+     color: black;
+ }
+
+ .product-item-footer {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     margin-top: 15px;
+ }
+
+ .origins span {
+     border-radius: 3 rem;
+     background-color: transparent;
+     color: green;
+     font-size: 1rem;
+     display: inline-block;
+ }
+
+ .cook-time {
+     font-size: .9rem;
+     flex: 3;
+     text-align: right;
+ }
+
+ .price {
+     color: white;
+     margin-top: .2rem;
+     background-color: orangered;
+ }
+
+ /* food slider */
+ @keyframes scroll{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(calc(-250px*4));
+    }
+ }
+ .slider{
+    height: 100px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    width: auto;
+ }
+ .slider .slide-track{
+    animation: scroll 20s linear infinite;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 15px;
+    width: calc(100 * 4);
+ }
+ .slider .slide{
+    height: 100px;
+    width: 200px;
+ }
+ .slide img{
+    
+    border-radius: 100px;
+    border: solid 5px orangered;
+    
 }
-.origins span{
-    border-radius: 3 rem;
-    background-color: transparent;
-    color: green;
-    font-size: 1rem;
-    display: inline-block;
+.slider{
+    background-color:transparent;
+    border-radius: 40px;
+    margin: 10px;
 }
-.cook-time{
-    font-size: .9rem;
-    flex: 3;
-    text-align: right;
-}
-.price{
-    color: white;
-    margin-top: .2rem;
-    background-color:orangered;
-}
+ 

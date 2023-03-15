@@ -1,80 +1,96 @@
-.main{
+.main {
     width: 100%;
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
 }
-nav{
+
+nav {
     width: 100%;
-    
     height: 80px;
     line-height: 80px;
     display: flex;
     justify-content: space-between;
 }
-.logo a{
+
+.logo a {
     font-size: 70px;
-    
+
     margin-left: 0px;
     text-decoration: underline;
     margin-top: 20px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-   color:red;
-   margin-top: 40px;
+    color: red;
+    margin-top: 40px;
 }
-a{
+
+.a-link a {
     text-decoration: none;
-    color: #fff;
+    color:white;
     font-size: 17px;
     transition: 0.5s all ease;
     margin-top: 20px;
 }
 
-ul{
+ul {
     margin: 0px;
-    
+
 }
 
-ul li{
+ ul li {
     float: left;
     padding: 0px 15px;
     list-style: none;
 }
-ul li a:hover{
+
+ ul .a-link  a:hover {
     color: red;
+    background-color: black;
+
 }
-.header{
+
+.header {
     background-position: center;
     background-size: cover;
     height: 100vh;
 }
-.content{
+
+.content {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     color: #fff;
     text-align: center;
-    background: rgba(0,0,0,0.5);
+    background: rgba(0, 0, 0, 0.5);
     height: 300px;
-    width:700px ;
+    width: 700px;
     border-radius: 20px;
-    
+
 
 }
-.content h1{
+.profile-image{
+    height: 40px ;
+    width: 40px;
+}
+.content{
+    border: 1px solid white;
+}
+
+.content h1 {
     font-size: 50px;
     margin-top: 50px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
-.content p{
+
+.content p {
     padding: 0px 50px;
     font-size: 20px;
-    font-family:Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     margin-top: 30px;
 }
 
-button{
+.button1{
     background: none;
     border: 1px solid #fff;
     color: #fff;
@@ -83,23 +99,54 @@ button{
     border-radius: 6px;
     transition: 0.5s all ease;
 }
-button:hover{
+
+.button1:hover {
     background: black;
-    color:orangered;
+    color: orangered;
 }
-span{
+
+span {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-   color: orangered;
+    color: orangered;
 }
 
+/* div .dropdown-menu .dropdown-item {
+    color: white;
+    margin: 0px;
+    padding: 0px;
+    border: solid 1px white;
+    height: 60px;
+    margin-left: 30px;
+} */
 
+.wrapper ul li a:hover .sub-menu{
+    display: block;
+    position: absolute;
+}
+.dropdown-menu a{
+    color:white;
+    margin: 0px;
+    padding: 0px;
+}
+ /* .dropdown-menu .dropdown-item{
+    height: 40px;
+    width: 100px;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 60px;
+}  */
+.dropdown button{
+    background-color: transparent;
+    border: none;
+    font-size: 18px;
+}
+.dropdown-menu .dropdown-item:hover{
+    background-color: orangered;
+}
+.image-button{
+    margin: 10px;
+    text-align: center;
+    justify-content: center;
+    margin-left: 220px;
+}
 
-
-
-
-
-
-
-
-
-  

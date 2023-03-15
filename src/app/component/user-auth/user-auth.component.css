@@ -7,7 +7,7 @@
 .wrapper{
     position: relative;
     width: 400px;
-    height: 450px;
+    height: 480px;
     background:rgba(255,255,255,.15);
     box-shadow: 0  8px 32px rgb(31,38,135,.18);
     border: 1px solid rgba(255,255,255,.18);
@@ -28,7 +28,8 @@ h2{
 .input-box{
     position: relative;
     width: 320px;
-    margin: 30px 0;
+    margin: 0px 0;
+    margin-top: 20px;
     border-bottom: 2px solid #fff;
 }
 .input-box label {
@@ -94,6 +95,10 @@ button{
     font-size: 1em;
     color: #fff;
     font-weight: 500;
+    margin-top: 40px;
+}
+button:hover{
+ opacity: .7;
 }
 
 .registar-link{

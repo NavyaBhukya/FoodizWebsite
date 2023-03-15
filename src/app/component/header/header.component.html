@@ -1,27 +1,120 @@
 <div class="main">
-    <div class="wrapper">
-        <div class="header">
-            <i class="fa-solid fa-plate-utensils"></i>
+  <div class="wrapper">
+    <div class="header">
+      <nav>
 
-            <nav>
-                <div class="logo">
-                    <a href="">FOODIZ</a>
-                </div>
-                <ul>
-                    <li><a routerLink="/home" routerLinkActive="active">Home</a></li>
-                    <li><a routerLink="/user-auth" routerLinkActive="active">User</a></li>
-                    <li><a href="#">FOOD</a></li>
-                    <li><a routerLink="/login" routerLinkActive="active">Login</a></li>
-                    <li><a href="#">SERVICE</a></li>
-                    <li><a routerLink="/contact-us" routerLinkActive="active">CONTACT</a></li>
-                </ul>
-            </nav>
-            <div class="content">
-                <h1>
-                    Welcome To <span>FOODIZ</span>     </h1>
-                <p>Want a delicious meal, but no time we will deliver it hot and yummy.</p>
-                <a routerLink="/home" routerLinkActive="active"><button>ORDER NOW</button></a>
-            </div>
+        <div class="logo">
+
+          <a href="">FOODIZ</a>
         </div>
+        <ul>
+          <li class="a-link"><a routerLink="/home" routerLinkActive="active">Home</a></li>
+          <li class="a-link"><a routerLink="/user-auth" routerLinkActive="active">SignUp</a></li>
+          <!-- <li><a routerLink="/login">LogOut</a></li> -->
+          <li class="a-link"><a routerLink="/login" routerLinkActive="active">Login</a></li>
+          <li class="a-link"><a routerLink="/contact-us" routerLinkActive="active">Contact-us</a></li>
+          <li class="a-link"><a routerLink="/restaurent-login" routerLinkActive="active">Restarant-Login</a></li>
+
+          <li class="a-link"><a routerLink="/cart-page" routerLinkActive="active">Cart</a></li>
+          <li><a>
+              <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Profile
+                </button>
+
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="background-color: black;">
+                  <a class="dropdown-menu" href="#">Details</a>
+                  <a class="dropdown-menu" href="#">Settings</a>
+                  <a class="dropdown-menu" href="#" data-toggle="modal" data-target="#exampleModal">Terms&Conditions</a>
+                  <a routerLink="/login">LogOut</a>
+                </div>
+              </div>
+              </a>
+
+          </li>
+          
+          
+          <a routerLink="/image-crop" routerLinkActive="active"><img src="{{imageupload}}"
+              style="width:60px;height: 60px; border-radius: 50%;"
+              class="profile-image">
+              <!-- <div class="container">
+                <input type="file" (change)="fileChangeEvent($event,popup)" data-bs-toggle="modal" data-bs-target="#popup" />
+              </div> -->
+              </a>
+          <!-- dilog Model -->
+          <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Terms & Conditions</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body" style="padding: 0px; margin: 0px;">
+                  2. The website reserves the right to refuse service or cancel orders at any time, for any reason.
+                  <br>
+                  3. Prices for menu items listed on the website are subject to change without notice.
+                  <br>
+                  4. The website is not responsible for any issues or dissatisfaction related to the quality of the food
+                  or
+                  delivery service, which is the responsibility of the restaurant.
+                  <br>
+                  5. By placing an order through the website, customers agree to the terms and conditions, including any
+                  applicable fees, taxes, and delivery charges.
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+        </ul>
+      </nav>
+      <div class="content">
+        <h1>
+          Welcome To <span>FOODIZ</span> </h1>
+        <p>Want a delicious meal, but no time we will deliver it hot and yummy.</p>
+        <a routerLink="/home" routerLinkActive="active"><button class="button1">ORDER NOW</button></a>
+      </div>
     </div>
+  </div>
 </div>
+
+<!-- image-cropper -->
+<div class="container">
+  <input hidden type="file" (change)="fileChangeEvent($event,popup)" data-bs-toggle="modal" data-bs-target="#popup" />
+</div>
+
+
+
+<ng-template #popup let-modal>
+  <div style="height: 300px; width: 300px;">
+    <image-cropper [imageChangedEvent]="imageChangedEvent" [maintainAspectRatio]="true" [aspectRatio]="2/ 2"
+      format="png" (imageCropped)="imageCropped($event)" (imageLoaded)="imgLoad()" (cropperReady)="cropperReady()"
+      (loadImageFailed)="loadImageFailed()"></image-cropper>
+
+  </div>
+
+  <div class="col-md-4">
+    <h6>Image Preview</h6>
+    <img [src]="croppedImage" alt="IMG" style="width:150px;height:150px; margin-left:180px ;" />
+  </div>
+  <div>
+    <a routerLink="/header" routerLinkActive="active"><button (click)="uploadImage()"
+        class="image-button">Upload</button></a>
+  </div>
+
+</ng-template>
+
+
+
+
+
+
+
+<app-footer></app-footer>

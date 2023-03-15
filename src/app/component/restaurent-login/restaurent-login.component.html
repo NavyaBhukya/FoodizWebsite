@@ -1,0 +1,39 @@
+<app-seller-home></app-seller-home>
+<div class="container">
+    <div *ngIf="!showLogin" class="seller-signIn">
+        <h1 class="heading">Restaurent-SignIn</h1>
+        <form #sellerSignUp="ngForm" (ngSubmit)="signUp(sellerSignUp.value)">
+            <div class="input-element">
+                <input type="text" placeholder="Enter username" ngModel name="name">
+            </div>
+            <div class="input-element">
+                <input type="email" placeholder="Enter email" ngModel name="email">
+            </div>
+            <div class="input-element">
+                <input type="password" placeholder="Enter Password" ngModel name="Password">
+            </div>
+            <div>
+                <button class="btn btn-primary">SignIn</button>
+            </div>
+            <a (click)="openLogin()" >Already have an account? Click here</a>
+        </form>   
+    </div>
+    <!-- seller-Login -->
+    <div *ngIf="showLogin" class="seller-signIn">
+        <h1 class="heading">Restaurent-LogIn</h1>
+        <p>{{authError}}</p>
+        <form #sellerLogin="ngForm" (ngSubmit)="login(sellerLogin.value)">
+            
+            <div class="input-element">
+                <input type="email" placeholder="Enter email" ngModel name="email">
+            </div>
+            <div class="input-element">
+                <input type="password" placeholder="Enter Password" ngModel name="Password">
+            </div>
+            <div>
+                <button class="btn btn-primary">LogIn</button>
+            </div>
+            <a (click)="openSignup()" >Don't have account? Click here</a>
+        </form>   
+    </div>
+</div>

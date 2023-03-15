@@ -1,0 +1,38 @@
+{
+  "seller": [
+    {
+      "name": "navya",
+      "email": "navya@gmail.com",
+      "password": "123456",
+      "id": 1
+    },
+    {
+      "name": "srija",
+      "email": "srija@gmail.com",
+      "password": "123456",
+      "id": 2
+    },
+    {
+      "email": "navya.bhukya4202@gmail.com",
+      "Password": "123456",
+      "id": 3
+    },
+    {
+      "name": "dosa",
+      "price": "234",
+      "category": "lunch",
+      "description": "good",
+      "image": "https://www.cookwithmanali.com/wp-content/uploads/2020/05/Masala-Dosa.jpg",
+      "id": 4
+    }
+  ],
+  "products": [
+    {
+      "name": "dosa",
+      "price": "234",
+      "category": "lunch",
+      "description": "good",
+      "image": "https://www.cookwithmanali.com/wp-content/uploads/2020/05/Masala-Dosa.jpg"
+    }
+  ]
+}

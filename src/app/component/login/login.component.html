@@ -1,31 +1,57 @@
-<div class="blob"></div>
+
 <div class="wrapper">
-  <form action="" [formGroup]="registarForm" (ngSubmit)="onSubmit()">
+  <form [formGroup]="loginForm">
     <h2>Log In</h2>
     <div class="input-box">
       <span class="icon"><i class="fa-solid fa-envelope"></i></span>
-      <input type="email" class="form-control" formControlName="email" id="email" NgModule required />
+      <input type="email" class="form-control" formControlName="email" id="email" required />
       <label>Email</label>
-      <div class="div text text-danger" style="padding: 0px; margin: 0px;"
-      *ngIf="email">
-        
-        **Please Enter Valid Details </div>
+      <!-- <div class="form text text-danger" style="padding: 0px; margin: 0px;" *ngIf="email.errors?.['required']">
+          **Please Enter Valid Input </div> -->
     </div>
+
+    <div class="form text text-danger" style="padding: 0px; margin: 0px;" *ngIf="email.invalid && email.touched">
+      **Please Enter Valid Input </div>
+
     <div class="input-box">
       <span class="icon"><i class="fa-solid fa-key"></i></span>
       <input type="password" formControlName="password" class="form-control" id="password" required />
       <label>Password</label>
+      <!-- <div class="form text text-danger" style="padding: 0px; margin: 0px;" *ngIf="email">
+          **Please Enter Valid Input </div> -->
     </div>
+    <div class="form text text-danger" style="padding: 0px; margin: 0px;" *ngIf="password.invalid && password.touched">
+      **<span>Please Enter Valid Input</span> </div>
+
+
+
     <div class="remember-forgot">
       <label><input type="checkbox">
         Remember Me</label>
       <a href="#"> Forgot Password</a>
     </div>
-    <button type="submit">login</button>
+    <button type="submit" (click)="onLogin()">login</button>
     <div class="registar-link">
-      <p>Don't have an account? <a routerLink="/user-auth" routerLinkActive="active">Registar</a></p>
+      <p>Don't have an account? <a routerLink="/user-auth" routerLinkActive="active"
+          style="text-decoration: underline;">Registar</a></p>
+    </div>
+    <h1 class="or">Or</h1>
+    <div style="text-align: center;">
+      <span style="text-align: center; color: white;">LogIn with</span>
+      <!-- <button class="google-button btn-primary"><span style="color:#176BEF;">G</span><span style="color:#FF3E30;">o</span><span style="color:#F7B529;">o</span><span style="color:#176BEF;">g</span><span style="color:#179C52;">l</span><span style="color:#FF3E30;">e</span></button> -->
+    </div>
+    <div style="margin-left: 150px; margin-top: 10px; width: 60px;">
+      <asl-google-signin-button *ngIf="!user" class="p-5"></asl-google-signin-button>
+    </div>
+    <div *ngIf="user" style="text-align: center; justify-content: center;">
+      <img src="{{user.photoUrl}}" style="height:60px; width: 60px; border-radius: 50px;">
+      <div>
+        <h4 style="font-size: 17px; color: white; margin: 5px;">{{user.name}}</h4>
+        <p style="font-size: 12px; color: white; margin: 5px;">{{user.email}}</p>
+      </div>
     </div>
   </form>
 
 
 </div>
+<app-footer></app-footer>

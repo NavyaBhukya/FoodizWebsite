@@ -1,0 +1,39 @@
+<div class="wrapper">
+    <div class="container">
+        <nav>
+            <label class="logo">Foodiz</label>
+            <ul>
+                <li><a routerLink="/home">Home</a></li>
+                <li><a routerLink="/restaurent-login" routerLinkActive="active">LogIn</a></li>
+                <li><a routerLink="/restaurent-login" routerLinkActive="active">SignUp</a></li>
+                <li><a routerLink="/add-product" routerLinkActive="active">AddProducts</a></li>
+            </ul>
+        </nav>
+    </div>
+</div>
+<div class="product-list">
+<h1 class="product-heading">All product List</h1>
+<p class="message-p">{{productMessage}}</p>
+<table style="background-color: white; margin-left: 350px;" >
+    <thead>
+        <tr class="table-heading">
+            <th>Image</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Category</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of productList">
+            <td><img src="{{item.url}}"/></td>
+            <td>{{item.name}}</td>
+            <td>{{item.price}}</td>
+            <td>{{item.category}}</td>
+            <td>{{item.description}}</td>
+            <td><button (click)="deleteProduct(item.id)">Delete</button></td>
+        </tr>
+    </tbody>
+</table>
+</div>
+<app-footer></app-footer>

@@ -1,0 +1,155 @@
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    margin: .5rem;
+    background-color: white;
+    padding: 5rem;
+}
+ul{
+    display: flex;
+    flex-direction: column;
+    flex: 3 0;
+    border-radius: 1rem;
+    border: 1px solid orangered;
+    margin: .5rem;
+    padding: 0;
+    list-style-type: none;
+    justify-content: space-evenly;
+}
+ul li{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    border-bottom: 1px solid orangered;
+}
+ul li:last-child{
+    border: none;
+}
+ul li img{
+    height: 7rem;
+    width: 7rem;
+    border-radius: 100rem;
+    object-fit: cover;
+}
+ul li div{
+    padding: 1rem;
+}
+ul li div:not(:first-child){
+    flex-basis: 18%;
+}
+ul li select{
+    width: 4rem;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid orangered;
+    font-weight: 100;
+}
+ul .remove-button{
+    background-origin: 1rem;
+    border: none;
+    outline: none;
+    padding: .5rem;
+    background-color:orangered;
+    color: white;
+    border-radius: 1rem;
+}
+ul .remove-button:hover{
+    opacity: .5;
+    cursor: pointer;
+}
+.checkout{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1 3;
+    height: 20rem;
+    border: 1px solid red;
+    border-radius: 1rem;
+    padding: .5rem;
+    margin: .5rem;
+}
+.checkout>div{
+    display: flex;
+    flex: 3;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 1rem;
+    font-size: 1.4rem;
+}
+.checkout .food-count{
+    margin-bottom: 1.5rem;
+}
+.checkout .food-count::before{
+    content: 'Total Items: ';
+    color: black;
+}
+.checkout .total-price::before{
+    content: 'Total Price: ';
+    color: black;
+}
+.checkout a{
+    padding: 1rem;
+    color: white;
+    background-color: red;
+    display: block;
+    width: 99%;
+    border-radius: 1rem;
+    text-align: center;
+    justify-content: center;
+}
+.checkout a:hover{
+    opacity: .7;
+    background-color: orangered;
+}
+.payment-button{
+    padding: 1rem;
+    color: white;
+    background-color: red;
+    display: block;
+    width: 99%;
+    border-radius: 1rem;
+    text-align: center;
+    justify-content: center;
+    border: none;
+}
+
+/* button styling */
+
+.q-button {
+    font-size: 12px;
+    display: inline-block;
+    outline: 0;
+    border: 0;
+    cursor: pointer;
+    will-change: box-shadow,transform;
+    background: radial-gradient( 100% 100% at 100% 0%,red 0%, orangered 100% );
+    box-shadow: 0px 0.01em 0.01em rgb(45 35 66 / 40%), 0px 0.3em 0.7em -0.01em rgba(118, 117, 122, 0.3), inset 0px -0.01em 0px rgb(58 65 111 / 50%);
+    padding: 0 1em;
+    border-radius: 0.3em;
+    color: #fff;
+    height: 30px;
+    width: 40px;
+    text-shadow: 0 1px 0 rgb(0 0 0 / 40%);
+    transition: box-shadow 0.15s ease, transform 0.15s ease;
+   }
+   
+   .q-button:hover {
+    box-shadow: 0px 0.1em 0.2em rgb(45 35 66 / 40%), 0px 0.4em 0.7em -0.1em rgb(45 35 66 / 30%), inset 0px -0.1em 0px #3c4fe0;
+    transform: translateY(-0.1em);
+   }
+   
+   .q-button:active {
+    box-shadow: inset 0px 0.1em 0.6em #3c4fe0;
+    transform: translateY(0em);
+   }
+   .button-container{
+    display: flex;
+   }
+.input-box{
+  width: 40px;
+  padding:0px 13px;
+}
